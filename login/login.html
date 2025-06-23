@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login / Register</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+    <link rel="stylesheet" href="login.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <!--Back to Main Page Link-->
+    <div class="back-link">
+        <!-- If login.html sits in /login/, adjust path to main page -->
+        <a href="../index.html" class="link-btn">← Back to Menu</a>
+    </div>
+
+    <!--Sign Up (Register) Container-->
+    <div class="container hidden" id="signUp" aria-hidden="true">
+        <h1 class="form-title">Register</h1>
+        <form method="post" action="">
+            <label class="float">
+                <i class="fas fa-user"></i>
+                <input type="text" id="fname" name="fname" placeholder="" required />
+                <span>First Name</span>
+            </label>
+            <label class="float">
+                <i class="fas fa-user"></i>
+                <input type="text" id="lname" name="lname" placeholder="" required />
+                <span>Last Name</span>
+            </label>
+            <label class="float">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="email-signup" name="email" placeholder="" required />
+                <span>Email</span>
+            </label>
+            <label class="float">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="pass-signup" name="password" placeholder="" required />
+                <span>Password</span>
+            </label>
+
+            <input type="submit" class="btn" value="Sign Up" name="signUp" />
+        </form>
+        <p class="or">— or —</p>
+        <div class="icons">
+            <i class="fab fa-google"></i>
+            <i class="fab fa-facebook"></i>
+        </div>
+        <div class="links">
+            <p>Already have an account?</p>
+            <button id="signInButton" type="button" class="link-btn">
+                Sign In
+            </button>
+        </div>
+    </div>
+
+    <!--Sign In Container-->
+    <div class="container" id="signIn">
+        <h1 class="form-title">Sign In</h1>
+        <form method="post" action="">
+            <label class="float">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="email-signin" name="email" placeholder="" required />
+                <span>Email</span>
+            </label>
+            <label class="float">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="pass-signin" name="password" placeholder="" required />
+                <span>Password</span>
+            </label>
+            <p class="recover">
+                <a href="#">Recover Password</a>
+            </p>
+            <input type="submit" class="btn" value="Sign In" name="signIn" />
+        </form>
+        <p class="or">— or —</p>
+        <div class="icons">
+            <i class="fab fa-google"></i>
+            <i class="fab fa-facebook"></i>
+        </div>
+        <div class="links">
+            <p>Don't have an account yet?</p>
+            <button id="signUpButton" type="button" class="link-btn">
+                Sign Up
+            </button>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+
+</html>
