@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Pizzaria</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <h1 class="logo">πzzaria</h1>
+        <nav class="header__nav">
+            <button class="btn btn--primary btn--order">Order</button>
+        </nav>
+        <div class="auth">
+            <button class="btn btn--auth" onclick="location.href='login/login.html'">Login</button>
+            <button class="btn btn--auth" onclick="location.href='login/login.html?mode=signup'">Sign Up</button>
+        </div>
+    </header>
+
+    <!-- CATEGORY BAR -->
+    <div class="category-bar">
+        <button class="category-btn active" data-category="all">All</button>
+        <button class="category-btn" data-category="pizzas">Pizzas</button>
+        <button class="category-btn" data-category="burgers">Burgers</button>
+        <button class="category-btn" data-category="sides">Sides</button>
+        <button class="category-btn" data-category="desserts">Desserts</button>
+        <button class="category-btn" data-category="drinks">Drinks</button>
+    </div>
+
+
+    <!-- INGREDIENT BAR -->
+    <nav class="ingredient-bar" role="navigation" aria-label="Filter by ingredients">
+        <div class="ingredient-primaries">
+            <button class="ingredient-btn" data-primary="meat" aria-pressed="false">
+                <img src="images/icons/meat.png" alt="Meat" /><span>Meat</span>
+            </button>
+            <button class="ingredient-btn" data-primary="vegetables" aria-pressed="false">
+                <img src="images/icons/vegetables.png" alt="Vegetables" /><span>Vegetables</span>
+            </button>
+            <button class="ingredient-btn" data-primary="cheese" aria-pressed="false">
+                <img src="images/icons/cheese.png" alt="Cheese" /><span>Cheese</span>
+            </button>
+            <button class="ingredient-btn" data-primary="sauces" aria-pressed="false">
+                <img src="images/icons/sauces.png" alt="Sauces" /><span>Sauces</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- DELIVERY TIMER SLIDE -->
+    <div id="deliveryTimer" class="delivery-timer hidden">
+        Estimated delivery in <span id="timerDisplay">40:00</span>
+        <button id="skipTimerBtn" class="btn btn--secondary">Skip</button>
+    </div>
+
+    <!-- MAIN PRODUCT GRID -->
+    <main>
+        <div class="grid" id="productGrid"></div>
+    </main>
+
+    <!-- CART POPUP -->
+    <aside id="cart" class="cart hidden">
+        <h2>Your Cart</h2>
+        <ul id="cartItems" class="cart-items"></ul>
+        <div class="cart-footer">
+            <p>Total: <span id="cartTotal">$0.00</span></p>
+            <button id="checkoutBtn" class="btn btn--primary">Checkout</button>
+        </div>
+    </aside>
+
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
